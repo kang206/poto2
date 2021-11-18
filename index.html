@@ -7,6 +7,10 @@
     <title>반응형 test</title>
     <style>
         * {margin: 0; padding: 0; font-style: none; list-style: none;}
+
+        
+       
+    
         header{width: 1920px; height: 200px;}
         #toplogo {width: 1100px;; height: 100px; margin: 0 auto; }
         #logo {width: 1100px; height: 100px;  }
@@ -14,7 +18,9 @@
         #logo_img img {float: left; padding: 0px 0px 0px 30px;}
         #logo_img h1 {padding: 20px;}
         #loginForm {width: 500px; height: 100px; float: right; display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;} 
-        #swich_body {width: 1920px; height: auto; margin: 0 auto;}
+        #swich_body {width: 1920px; height: auto; margin: 0 auto;  min-height:100%;
+        position:relative;
+        padding-bottom:126px;}
         
         #nav {width: 1920px; height: 100px;   background-color: black;  }
         #nav ul{width: 1000px; height: 100px;  display: flex; align-content: center; padding-top: 40px; justify-content: space-between; margin: 0 auto; }
@@ -28,7 +34,11 @@
         #img_product {width: 100%; height: 600px; background-color: cornflowerblue;}
         #event_blog {width: 100%; height: 500px; background-color: cyan;}
         #info_slider {width: 100%; height: 400px; background-color: darkcyan;}
-        footer {width: 100%; height: 300px; background-color: black;} 
+
+        footer { width: 100%; height: 126px;  background-color: black; position:absolute;  bottom:0;} 
+        #under { width:1140px; height: 100px; color: white; text-align: center; margin: 0 auto; padding: 40px 10px 10px 10px; }
+        #under img {width: 150px; height: 50px; float: left;}
+
     </style> 
 </head>
 <body>
@@ -67,7 +77,13 @@
   
     <section id="event_blog"></section>
     <section id="info_slider"></section>
-    <footer></footer>
+    <footer>
+        <div id="under">
+            <a href="#"><img src="img/gamgol_logo.png"></a>
+            <span>경기도대표도서관 감골도서관 <em>|</em> 우편번호 15591 경기도 안산시 상록구 감골공원안길 16-1 (사동) TEL : 031-481-2665 FAX : 031-481-3632</span><br>
+            <span>Copyright © 2007 Kamkol Library. All Rights Reserved.</span>
+        </div>
+    </footer>
     </section>
 </body>
 </html>
