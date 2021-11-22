@@ -4,9 +4,9 @@
         * {margin: 0; padding: 0; font-style: none; list-style: none;}
         @media only screen and (max-width: 768px){
             /* 768px 이하일 때 css 코드 작성: 모바일용 */
-            * {margin: 0; padding: 0; font-style: none; list-style: none;}
+        
             #swich_body {width: 100%; height: auto;   min-height:100%; position:relative; padding-bottom:126px;}
-            header{width: 100%; height: 300px;}
+            header{width: 100%; height: 232px;}
             #toplogo {width: 100%; height: 200px; margin: 0 auto; }
             #logo {width: 100%; height: 200px;  }
             #logo_img {width: 300px; height: 100px; display: inline-block;}
@@ -14,12 +14,17 @@
             #logo_img h1 {padding: 20px;}
             #loginForm {width: 100%; height: 100px; display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;} 
     
-            
-            #underheader {width: 100%; height: 230px; background-color: black;}
-            #nav {width: 100%; height: 200px; margin: 0 auto; }
-            #nav ul{width: 100%; height: 200px;  display: flex; flex-direction: column; align-content: center; justify-content: space-between; flex-wrap: wrap; padding-top: 20px;}
-            #nav ul a{ color:white; font-family: "SBAggroB"; font-size: 18px; text-decoration: none;}
-            #nav ul a:hover{color: white; border-bottom: 4px solid currentColor; text-decoration: none;}
+            #underheader {width: 100%; height: auto; display: flex; align-items: center; justify-content: space-between; margin: 0 auto; background-color: lightgray;}
+            #search { width: 400px; height: 30px; float: right;}
+            #small {z-index: 5;}
+            #navb {width: 100%; display: flex; align-items: center; justify-content: space-between; z-index: 10;}
+            #navb ul {background-color: lightgray;}
+            #navb a{padding: 15px; text-decoration: none; display:block;}
+            #navb a:hover {background-color: gray; color:#666; text-decoration: none; display: block;}
+            #nava {display:none;}
+            #navb {display: none;}
+            #menu {cursor: pointer;}
+           
     
             footer { width: 100%; height: 126px;  background-color: black; position:absolute;  bottom:0;} 
             #under { width:100%; height: 100px; color: white; text-align: center; margin: 0 auto;  }
@@ -28,45 +33,53 @@
         
         @media only screen and (min-width: 768px)and (max-width:1200px){
             /* 1200px ~ 768px일 때 css 코드 작성: 태블릿용 */
-            * {margin: 0; padding: 0; font-style: none; list-style: none;}
-            header{width: 100%; height: 300px;}
+            
+            header{width: 100%; height: 232px;}
             #toplogo {width: 100%; height: 200px; margin: 0 auto; }
             #logo {width: 100%; height: 200px;  }
             #logo_img {width: 300px; height: 100px; display: inline-block;}
             #logo_img img {float: left;}
             #logo_img h1 {padding: 20px;}
-            #loginForm {width: 100%; height: 100px; float: right; display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;} 
+            #loginForm {width: 100%; height: 100px; float: right; display: flex; flex-direction: row; justify-content: flex-end; align-items: center;}
+            #swich_body {width: 100%; height: auto; margin: 0 auto;  min-height:100%; position:relative; padding-bottom:126px;}
+             
     
             
-            #underheader {width: 100%; height: 230px; background-color: black;}
-            #nav {width: 100%; height: 200px; margin: 0 auto; }
-            #nav ul{width: 100%; height: 200px;  display: flex; align-content: center; padding-top: 40px; justify-content: space-between; flex-wrap: wrap; padding-top: 20px;}
-            #nav ul a{ color:white; font-family: "SBAggroB"; font-size: 18px; text-decoration: none;}
-            #nav ul a:hover{color: white; border-bottom: 4px solid currentColor; text-decoration: none;}
+            #underheader {width: 100%; height: auto; display: flex; align-items: center; justify-content: space-between; margin: 0 auto; background-color: lightgray;}
+            #search { width: 400px; height: 30px; float: right;}
+            #small {z-index: 5;}
+            #navb {width: 100%; display: flex; align-items: center; justify-content: space-between; z-index: 10;}
+            #navb ul {background-color: lightgray;}
+            #navb a{padding: 15px; text-decoration: none; display:block;}
+            #navb a:hover {background-color: #eee; color:#666; text-decoration: none; display: block;}
+            #nava {display:none;}
+            #navb {display: none;}
+            #menu {cursor: pointer;}
     
             footer { width: 100%; height: 126px;  background-color: black; position:absolute;  bottom:0;} 
-            #under { width:1140px; height: 100px; color: white; text-align: center; margin: 0 auto; padding: 10px 10px 10px 10px; }
+            #under { width: 100%; height: 100px; color: white; text-align: center; margin: 0 auto; padding: 10px 10px 10px 10px; }
             #under img {width: 150px; height: 50px; float: left;}
         }
         
         @media only screen and (min-width: 1200px){
             /*1200px 이상일 때 css 코드 작성: pc용*/
-            * {margin: 0; padding: 0; font-style: none; list-style: none;}
-            header{width: 1920px; height: 150px;}
+           
+            header{width: 100%; height: 150px;}
             #toplogo {width: 1100px;; height: 100px; margin: 0 auto; }
             #logo {width: 1100px; height: 100px;  }
             #logo_img {width: 500px; height: 100px; display: inline-block;}
             #logo_img img {float: left; padding: 0px 0px 0px 30px;}
             #logo_img h1 {padding: 20px;}
             #loginForm {width: 500px; height: 100px; float: right; display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;} 
-            #swich_body {width: 1920px; height: auto; margin: 0 auto;  min-height:100%; position:relative; padding-bottom:126px;}
+            #swich_body {width: 100%; height: auto; margin: 0 auto;  min-height:100%; position:relative; padding-bottom:126px;}
             
-            #underheader {width: 100%; height: 50px; background-color: black; position: relative;}
-            #nav {width: 700px; height: 50px; margin: 0 auto;}
-            #nav ul{width: 100%; height: 50px;  display: flex; align-items: center; justify-content: flex-start;  }
-            #nav ul a{padding: 11px; color:white; font-family: "SBAggroB"; font-size: 18px; text-decoration: none;}
-            #nav ul a:hover{color: white; border-bottom: 4px solid currentColor; text-decoration: none;}
-            #search { width: 400px; height: 30px; float: right; top: 12px; left: 1300px; position: absolute;}
+            #topheader {width: 100%; height: 50px; background-color: black; position: relative; margin: 0 auto;}
+            #nava {width: 1100px; height: 50px; margin: 0 auto;}
+            #nava ul{width: 100%; height: 50px;  display: flex; align-items: center; justify-content: flex-start;  }
+            #nava ul a{padding: 11px; color:white; font-family: "SBAggroB"; font-size: 18px; text-decoration: none;}
+            #nava ul a:hover{color: white; border-bottom: 4px solid currentColor; text-decoration: none;}
+            #search { width: 30%; height: 30px; float: right; top: 12px; left: 1250px; position: absolute;}
+            #small {display: none;}
     
             footer { width: 100%; height: 126px;  background-color: black; position:absolute;  bottom:0;} 
             #under { width:1140px; height: 100px; color: white; text-align: center; margin: 0 auto; padding: 10px 10px 10px 10px; }
