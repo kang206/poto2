@@ -5,8 +5,10 @@
     height: 400px;
 }
 #slider img {
-    width: 100%;
+    width: 1100px;
     height: 400px;
+    position: relative;
+    left: 21%;
 }
 
 #main_info {
@@ -27,16 +29,29 @@
 #left_box {
     width: 50%;
     height: 700px;
-    background-color: lightgray;
     position: relative;
     display: inline-block;
+    
+}
+
+.left_title {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#left_box img {
+    width: 250px;
+    height: 200px;
+    margin-bottom: 0.5rem;
+    padding-left: 15px;
 }
 
 #right_box {
     width: 45%;
     height: 697px;
     float: right;
-    position: relative;
+    
     border: lightgreen 3px solid;
 }
 
@@ -45,26 +60,107 @@
     margin-bottom: 20px;
 }
 
-#left_box h2 {
-    margin-bottom: 1.5rem;
+
+#count_intro {
+    position: relative;
+    padding: 3em 0;
+    z-index: 0;
+    width: 100%;
+    height: 200px;
 }
 
-#left_box p {
-    margin-top: 0;
-    margin-bottom: 1rem;
+#count_intro img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    opacity: 0.2;
+    
+}
+
+#count_intro h2 {
+    position: absolute;
+    left: 40%;
+    top: 110px;
 }
 
 #count {
     width: 100%;
-    height: 400px;
-    background-color: chartreuse;
+    height: 200px;
+    position: relative;
+    z-index: 0;
+    padding: 1em;
+    margin-top: -130px;
+
+}
+
+.wapper {
+   width: 100%;
+   max-width: 1100px;
+   height: 100px;
+   background-color: #fff;
+   padding: 30px;
+   box-shadow: 0px 5px 18px -9px rgb(0, 0, 0); 
+   margin: 0 auto;
+}
+
+.count_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #best_info {
     width: 100%;
-    height: 700px;
-    background-color: chocolate;
+    height: 800px;
+    padding: 7em 0;
+    position: relative;
 }
+
+.info_flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-direction: column;
+    align-content: center;
+   
+}
+
+.info_title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.info_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info_content img {
+    width: 500px;
+    height: 500px;
+   
+}
+
+.best {
+    width: 500px;
+    height: 700px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+
 
 #img_product {
     width: 100%;
