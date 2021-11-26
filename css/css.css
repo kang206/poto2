@@ -47,7 +47,7 @@
 
 #left_box p {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .service_flex {
@@ -68,12 +68,25 @@
     width: 250px;
     height: 200px;
     position: relative;
-    background: #f0f9fd;
+    background: lightgreen;
     padding: 20px 30px;
     margin-bottom: 30px;
     text-align: center;
     transition: all 0.3s ease;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service h1 {
+    font-size: 24pt;
+    font-family: "맑은 고딕";
+}
+
+.service img {
+    width: 50px;
+    height: 50px;
+
 }
 
 .service:after {
@@ -86,10 +99,17 @@
     border-style: solid;
     border-width: 0 50px 50px 0;
     border-color: transparent #fff transparent transparent;
+    
 }
 
-.service a:hover {
-    background-color: blue;
+.service:hover {
+    background-color: #1b9ce3;
+
+}
+
+.service a {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -190,24 +210,66 @@
 
 .info_content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+.best3 {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    
+    border: 4px solid #d1ebf9;
+    background-image: url(../img/sugbook_20210205151520.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-height: 100%;
+    height: 300px;
+    width: 300px;
+}
+
+.best1 {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    
+    border: 4px solid #d1ebf9;
+    background-image: url(../img/sugbook_20210205151656.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-height: 100%;
+    height: 300px;
+    width: 300px;
+}
+
+
+.best2 {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    
+    border: 4px solid #d1ebf9;
+    background-image: url(../img/sugbook_20210205151847.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100%;
+    height: 300px;
+    width: 300px;
+}
+
+.book_20 {
+    overflow: hidden;
+    position: relative;
     
 }
 
-.info_content img {
-    width: 500px;
-    height: 500px;
-   
+.best_text {
+    display: inline-block;
+    background: #1b9ce3;
 }
-
-.best {
-    width: 500px;
-    height: 700px;
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-}
-
-
 
 #img_product {
     width: 100%;
