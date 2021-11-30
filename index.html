@@ -24,6 +24,33 @@
             }
         });
 
+        $('.prev').click(function(){
+
+            $('.slide li:last').prependTo('.slide');
+
+            $('.slide').css('margin-left', -1000);
+
+            $('.slide').stop().animate({ marginLeft: 0 }, 800)
+
+        });
+
+
+
+    $('.next').click(function () {
+
+        $('.item').stop().animate({ marginLeft: -1000 }, 800, function () {
+
+            $('.item li:first').appendTo('.item');
+
+            $('.item').css({ marginLeft: 0 });
+
+        });
+
+    });
+
+​
+
+
     </script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
@@ -305,8 +332,50 @@
                             </div>
                         </div>
                     </div>
+                    <div class="item">
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                    and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                    and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                    and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                    </div>         
                 </div>
                 </div>
+                <span class="prev">&lt;</span>
+
+                    <span class="next">&gt;</span>
             </div>
             </div>
             </div>
