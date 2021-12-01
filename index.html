@@ -24,6 +24,128 @@
             }
         });
 
+        $(function () {
+
+            $('.prev').click(function () {
+
+                $('#slide .item_flex:last').prependTo('#slide');
+
+                $('#slide').css('margin-left', -367);
+
+                $('#slide').stop().animate({ marginLeft: 0 }, 800)
+
+            });
+
+
+
+            $('.next').click(function () {
+
+                $('#slide').stop().animate({ marginLeft: -367 }, 800, function () {
+
+                    $('#slide .item_flex:first').appendTo('#slide');
+
+                    $('#slide').css({ marginLeft: 0 });
+
+                });
+
+            });
+
+        });
+
+        $(function () {
+                $(window).scroll(function () {
+                    var numberingOffset = $('#count_intro').offset();
+                    if ($(document).scrollTop() < numberingOffset.top) {
+                        var dailyNum = 145;
+                        var bestNum = 65;
+                        var masterNum = 659;
+                        var ourNum = 109;
+
+                        $({
+                            val: 0
+                        }).animate({
+                            val: dailyNum
+                        }, {
+                            duration: 2000,
+                            step: function () {
+                                var num = dailyNumCommas(Math.floor(this.val));
+                                $(".daily").text(num);
+                            },
+                            complete: function () {
+                                var num = dailyNumCommas(Math.floor(this.val));
+                                $(".daily").text(num);
+                            }
+                        });
+
+                        function dailyNumCommas(x) {
+                            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        }
+
+                        $({
+                            val: 0
+                        }).animate({
+                            val: bestNum
+                        }, {
+                            duration: 2000,
+                            step: function () {
+                                var num2 = bestNumCommas(Math.floor(this.val));
+                                $(".sitnum").text(num2);
+                            },
+                            complete: function () {
+                                var num2 = bestNumCommas(Math.floor(this.val));
+                                $(".sitnum").text(num2);
+                            }
+                        });
+
+                        function bestNumCommas(x) {
+                            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        }
+
+                        $({
+                            val: 0
+                        }).animate({
+                            val: masterNum
+                        }, {
+                            duration: 2000,
+                            step: function () {
+                                var num3 = masterNumCommas(Math.floor(this.val));
+                                $(".booknum").text(num3);
+                            },
+                            complete: function () {
+                                var num3 = masterNumCommas(Math.floor(this.val));
+                                $(".booknum").text(num3);
+                            }
+                        });
+
+                        function masterNumCommas(x) {
+                            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        }
+                        $({
+                            val: 0
+                        }).animate({
+                            val: ourNum
+                        }, {
+                            duration: 2000,
+                            step: function () {
+                                var num4 = ourNumCommas(Math.floor(this.val));
+                                $(".newbook").text(num4);
+                            },
+                            complete: function () {
+                                var num4 = ourNumCommas(Math.floor(this.val));
+                                $(".newbook").text(num4);
+                            }
+                        });
+
+                        function ourNumCommas(x) {
+                            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        }
+                    } else return;
+                });
+            });
+
+        
+
+
     </script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
@@ -144,12 +266,6 @@
                             또한 디지털시대에 걸맞는 도서관으로 거듭나기 위해 최첨단 디지털도서관 환경구축 및 전자책 등 다양한 컨텐츠 구비로 시민들의 정보이용 욕구에 부합되는 도서관이 되기
                             위해 최선을 다하고 있습니다.<br>
 
-
-
-                            항상 노력하며 시민과 함께하는 감골도서관이 될 것을 거듭 약속드리며 도서관에 대한 지속적인 관심과 이용 부탁드립니다.<br>
-
-
-
                             감사합니다.</p>
                     </div>
                 </div>
@@ -163,19 +279,19 @@
             <div class="wapper">
                 <div class="count_flex">
                     <div class="counter">
-                        <h1>145</h1><br>
+                        <h1 class="daily">145</h1><br>
                         <p>도서관 다녀간 사람</p>
                     </div>
                     <div class="counter">
-                        <h1>65</h1><br>
+                        <h1 class="sitnum">65</h1><br>
                         <p>열람실 남은 자리</p>
                     </div>
                     <div class="counter">
-                        <h1>659</h1><br>
+                        <h1 class="booknum">659</h1><br>
                         <p>도서관 대출해간 책수</p>
                     </div>
                     <div class="counter">
-                        <h1>109</h1><br>
+                        <h1 class="newbook">109</h1><br>
                         <p>새로 들어온 책</p>
                     </div>
                 </div>
@@ -191,34 +307,45 @@
                     <div class="bestbook">
                         <div class="best3">
                             <div class="best_text">
-                                <span class="best_date">11월</span>
-                                <span class="best_num">3위</span>
-                                <a href="#">
-                                    <h3 class="hd">소문 바이러스</h3>
-                                </a>
+                                <span class="best_date">11월</span><br>
+                                <span class="best_num">3위</span>      
+                            </div>
+                            <div class="best_detail">
+                                <span class="best_title">소문바이러스</span>
+                                <p class="best_a">바이러스처럼 퍼진 소문의 끝,
+                                    과연 누구 때문이었을까? 우리는 어디가 아팠던 걸까?</p>
+                                    <div class="best_btn"><a href="#">보러가기</a></div>
                             </div>
                         </div>
-
+                        
                     </div>
                     <div class="bestbook">
                         <div class="best1">
                             <div class="best_text">
-                                <span class="best_date">11월</span>
+                                <span class="best_date">11월</span><br>
                                 <span class="best_num">1위</span>
-                                <a href="#">
-                                    <h3 class="hd">알로하, 나의 엄마들</h3>
-                                </a>
+                            </div>
+                            <div class="best_detail">
+                                <span class="best_title">알로하, 나의엄마들</span>
+                                <p class="best_a">“아프게, 기쁘게, 뜨겁게
+                                    인생의 파도를 넘어서며 살아갈 것이다.”
+                                    세 여성이 펼쳐 내는 가슴 뭉클한 가족 이야기</p>
+                                    <div class="best_btn"><a href="#">보러가기</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="bestbook">
                         <div class="best2">
                             <div class="best_text">
-                                <span class="best_date">11월</span>
+                                <span class="best_date">11월</span><br>
                                 <span class="best_num">2위</span>
-                                <a href="#">
-                                    <h3 class="hd">일의 기쁨과 슬픔</h3>
-                                </a>
+                            </div>
+                            <div class="best_detail">
+                                <span class="best_title">일의 기쁨과 슬픔</span>
+                                <p class="best_a">기쁨도 슬픔도 반짝반짝, 이토록 산뜻한 이야기의 등장
+                                    우리 문학이 기다려온 대형 신인! 모두가 기억하게 될 이름</p>
+
+                                    <div class="best_btn"><a href="#">보러가기</a></div>
                             </div>
                         </div>
                     </div>
@@ -265,8 +392,8 @@
                     </p>
                 </div>
                 <div class="event_stage">
-                <div class="event_detail">
-                    <div class="item">
+                    <div id="slide">
+                
                         <div class="item_flex">
                             <div class="user_img"></div>
                             <div class="item_text">
@@ -278,8 +405,7 @@
                                 <p class="name">안산시민</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
+                
                         <div class="item_flex">
                             <div class="user_img"></div>
                             <div class="item_text">
@@ -291,8 +417,7 @@
                                 <p class="name">안산시민</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
+                
                         <div class="item_flex">
                             <div class="user_img"></div>
                             <div class="item_text">
@@ -304,13 +429,89 @@
                                 <p class="name">안산시민</p>
                             </div>
                         </div>
+                
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries
+                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries
+                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                    and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                
+                
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries
+                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries
+                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                
+                        <div class="item_flex">
+                            <div class="user_img"></div>
+                            <div class="item_text">
+                                <span class="item_icon_flex">
+                                    <i class="far fa-bell  "></i>
+                                </span>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                    and Consonantia, there live the blind texts.</p>
+                                <p class="name">안산시민</p>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <div id="a">
+                    <span class="prev">&lt;</span>
+                    <span class="next">&gt;</span>
                     </div>
                 </div>
-                </div>
-            </div>
-            </div>
             </div>
         </section>
+
         <footer>
             <div id="under">
                 <a href="#"><img src="img/gamgol_logo.png"></a>

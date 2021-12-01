@@ -157,7 +157,6 @@
     position: relative;
     z-index: 0;
     margin-top: -130px;
-
 }
 
 .wapper {
@@ -182,6 +181,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.counter h1 {
+    font-size: 24pt;
 }
 
 #best_info {
@@ -216,80 +219,93 @@
 .bestbook {
     height: 640px;
     border: 4px solid lightgreen;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: 15px;
     margin-left: 15px;
+    position: relative;
 }
+
 
 .bestbook a {
     text-decoration: none;
 }
 
 .best3 {
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    justify-content: center;
-    background-image: url(../img/sugbook_20210205151520.JPG);
-    background-size: cover;
+    background-image: url(../img/sugbook_20210205151520.JPG);  
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    background-size: 320px 350px;
     min-height: 100%;
     height: 300px;
     width: 300px;
+    position: relative;
 }
 
 .best1 {
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    justify-content: center;  
     background-image: url(../img/sugbook_20210205151656.JPG);
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    background-size: 300px 350px;
     min-height: 100%;
     height: 300px;
     width: 300px;
+    position: relative;
 }
 
 
 .best2 {
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    justify-content: center;
     background-image: url(../img/sugbook_20210205151847.JPG);
-    background-size: contain;
+    background-size: 300px 350px;
     background-repeat: no-repeat;
-    background-position: center center;
     min-height: 100%;
     height: 300px;
     width: 300px;
+    position: relative;
 }
 
-.book_20 {
-    overflow: hidden;
-    position: relative;
-    
-}
+
 
 .best_text {
-    display: inline-block;
-    font-weight: 700;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 285px;
+    left: 0px;
+    font-weight: 00;
     font-size: 20px;
     padding: 0.5rem;
-    margin-bottom: 15px;
+    background-color: lightgreen;
 }
+
+.best_num {
+    font-weight: bold;
+}
+
+.best_detail {
+    padding-top: 360px;
+    text-align: center;
+}
+
+.best_title {
+    font-size: 24pt; 
+}
+
+.best_a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.best_btn {
+    background-color: lightgreen;
+    width: 100px;
+    height: 30px;
+    border: 1px solid lightgreen;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0 auto;
+}
+
+.best_btn a {
+    text-decoration: none;
+}
+
 
 #img_product {
     width: 100%;
@@ -324,7 +340,7 @@
     flex-wrap: wrap;
     justify-content: center;
     height: 1000px;
-    border: lightgreen 4px solid;
+    
 }
 
 .event img {
@@ -368,14 +384,26 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    width: 1100px;
+    height: 200px;
 }
 
 
 
 .event_stage {
+    position: relative;
+    touch-action: manipulation;
+    transition: all 0.25s ease 0s;
     width: 1100px;
+    transform: translate3d(0px, 0px, 0px);
     height: 300px;
+    overflow: hidden;
+}
+
+#slide {
+    
+    width: 3357px;
+    height: 247px;
 }
 
 .event_item {
@@ -391,6 +419,8 @@
 }
 
 .item_flex {
+    width: 305px;
+    float: left;
     position: relative;
     background: rgba(255,255,255,.1);
     color: rgba(0,0,0,.8);
@@ -400,6 +430,7 @@
     flex-direction: row;
     align-content: center;
     align-items: center;
+    margin-left: 15px;
 }
 
 .user_img {
@@ -434,6 +465,22 @@
     text-transform: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
+}
+
+#a {width: 1100px; margin: 0 auto; text-align: center;}
+
+.prev { border-radius: 0 10px 10px 0px; padding: 0 8px 0 2px;  font-size: 15pt;}
+
+.next { border-radius: 10px 0px 0px 10px; padding: 0 2px 0 8px; font-size: 15pt;}
+
+.prev:hover {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.next:hover {
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .name {
