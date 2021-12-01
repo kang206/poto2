@@ -467,7 +467,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-#a {width: 1100px; margin: 0 auto; text-align: center;}
+#slide_btn {width: 1100px; margin: 0 auto; text-align: center;}
 
 .prev { border-radius: 0 10px 10px 0px; padding: 0 8px 0 2px;  font-size: 15pt;}
 
