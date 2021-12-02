@@ -321,7 +321,7 @@
 
     #login_button:hover {
         background-color: white;
-        color: gray;
+        color: #333;
     }
 
     #swich_body {
