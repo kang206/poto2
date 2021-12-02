@@ -24,6 +24,26 @@
             }
         });
 
+        $(function (){
+            $('#perv_dot').click(function(){
+                $('.slide_img li:last').prependTo('.slide_img');
+
+                $('.slide_img').css('margin-left', -1903);
+
+                $('.slide_img').stop().animate({ marginLeft: 0 }, 800)
+            });
+
+            $('#next_dot').click(function(){
+                $('.slide_img').stop().animate({ marginLeft: -1903}, 800, function () {
+
+                    $('.slide_img li:first').appendTo('.slide_img');
+
+                    $('.slide_img').css({ marginLeft: 0 });
+            });
+        });
+
+    });
+
         $(function () {
 
             $('.prev').click(function () {
@@ -40,7 +60,7 @@
 
             $('.next').click(function () {
 
-                $('#slide').stop().animate({ marginLeft: -367 }, 800, function () {
+                $('#slide').stop().animate({ marginLeft: -367}, 800, function () {
 
                     $('#slide .item_flex:first').appendTo('#slide');
 
@@ -148,6 +168,7 @@
 
     </script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
 <body>
@@ -159,11 +180,7 @@
                     <img src="img/gamgol_logo.png">
                     <h1>감골도서관</h1>
                 </div>
-                <form name="loginForm" id="loginForm">
-                    <input type="text" name="userID" value maxlength="20" id="login_id" placeholder="아이디">
-                    <input type="password" name="PassWord" value maxlength="20" id="login_password" placeholder="비밀번호">
-                    <button>로그인</button>
-                </form>
+               <button id="login_button">로그인하기</button>
             </div>
         </div>
         <div id="topheader">
@@ -207,7 +224,18 @@
         </div>
     </header>
     <section id="swich_body">
-        <div id="slider"><img src="img/gmagol.jpg"></div>
+        <div id="slider">
+            <ul class="slide_img">
+                <li>
+                    <img src="img/libary_slide.jpg">     
+                </li>
+                <li><img src="img/libary_slide2.jpg"></li>
+            </ul>
+            <div id="slide_dot">
+            <button id="perv_dot"></button>
+            <button id="next_dot"></button>
+            </div>
+        </div>
         <section id="main_info">
             <div id="main_content">
                 <div id="main_box">
@@ -218,7 +246,7 @@
                             <div class="side_6">
                                 <div class="service">
                                     <a href="#">
-                                        <img src="img/icon_clip.png">
+                                        <i class="fas fa-paperclip"></i>
                                         <h1>공지사항</h1>
 
                                     </a>
@@ -226,7 +254,7 @@
                                 <div class="service">
                                     <div class="text">
                                         <a href="#">
-                                            <img src="img/icon_book.png">
+                                            <i class="fas fa-paperclip"></i>
                                             <h1>문학강좌</h1>
 
                                         </a>
@@ -237,16 +265,14 @@
                             <div class="side_6">
                                 <div class="service">
                                     <a href="#">
-                                        <img src="img/icon_bell.png">
+                                        <i class="fas fa-paperclip"></i>
                                         <h1>칭찬합시다</h1>
-
                                     </a>
                                 </div>
                                 <div class="service">
                                     <a href="#">
-                                        <img src="img/icon_build.png">
+                                        <i class="fas fa-paperclip"></i>
                                         <h1>관내도서관소식</h1>
-
                                     </a>
                                 </div>
                             </div>
@@ -256,15 +282,12 @@
                     <div id="right_box">
                         <img src="img/slider.jpg">
                         <h2>안산감골도서관에 방문해 주신 것을 진심으로 환영합니다.</h2><br>
-                        <p>안산시 감골도서관은 안산시민에게 책읽는 기쁨과 행복을 충족시키는데 이바지 하고자 지난 1997년 7월 31일에 개관을 하였습니다.<br>
+                        <p>안산시 감골도서관은 안산시민에게 책읽는 기쁨과 행복을 충족시키는데 이바지 하고자 지난 1997년 7월 31일에 개관을 하였습니다.<br><br>
 
 
 
                             넘쳐나는 정보의 홍수속에서 고품질의 정보를 체계적으로 수집, 제공하는 여건을 조성하여 정보 및 문화교육센터로서 기능을 다하고 시민의 정서함양과 문화수준 향상을
-                            목적으로 전문도서 및 시민이 원하는 희망도서 확충 등 시민의 삶의 질 향상에 최선을 다하고 있습니다.<br>
-
-                            또한 디지털시대에 걸맞는 도서관으로 거듭나기 위해 최첨단 디지털도서관 환경구축 및 전자책 등 다양한 컨텐츠 구비로 시민들의 정보이용 욕구에 부합되는 도서관이 되기
-                            위해 최선을 다하고 있습니다.<br>
+                            목적으로 전문도서 및 시민이 원하는 희망도서 확충 등 시민의 삶의 질 향상에 최선을 다하고 있습니다.<br><br>
 
                             감사합니다.</p>
                     </div>
@@ -514,7 +537,6 @@
 
         <footer>
             <div id="under">
-                <a href="#"><img src="img/gamgol_logo.png"></a>
                 <span>경기도대표도서관 감골도서관 <em>|</em> 우편번호 15591 경기도 안산시 상록구 감골공원안길 16-1 (사동) TEL : 031-481-2665 FAX :
                     031-481-3632</span><br>
                 <span>Copyright © 2007 Kamkol Library. All Rights Reserved.</span>
