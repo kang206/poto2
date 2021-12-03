@@ -5,7 +5,7 @@
     padding: 0;
     font-style: none;
     list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans';
 }
 
 @media only screen and (max-width: 768px) {
@@ -33,6 +33,12 @@
     #logo {
         width: 100%;
         height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
     #logo_img {
@@ -50,11 +56,21 @@
     }
 
     #login_button {
-        width: 200px;
-        height: 100px;
-        background-color: #eee;
-        border-radius: 20%;
+        width: 250px;
+        height: 50px;
+        background-color: lightgreen;
+        border-radius: 20px 20px 20px 20px;
         float: right;
+        margin-top: 20px;
+        border: 1px solid lightgreen;
+        text-decoration: lightgreen;
+        font-size: 15pt;
+        color: gray;
+    }
+
+    #login_button:hover {
+        background-color: white;
+        color: #333;
     }
 
     #underheader {
@@ -155,6 +171,12 @@
     #logo {
         width: 100%;
         height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
     #logo_img {
@@ -172,11 +194,21 @@
     }
 
     #login_button {
-        width: 200px;
-        height: 100px;
-        background-color: #eee;
-        border-radius: 20%;
+        width: 250px;
+        height: 50px;
+        background-color: lightgreen;
+        border-radius: 20px 20px 20px 20px;
         float: right;
+        margin-top: 20px;
+        border: 1px solid lightgreen;
+        text-decoration: lightgreen;
+        font-size: 15pt;
+        color: gray;
+    }
+
+    #login_button:hover {
+        background-color: white;
+        color: #333;
     }
 
     #swich_body {
