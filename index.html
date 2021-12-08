@@ -28,13 +28,13 @@
             $('#perv_dot').click(function(){
                 $('.slide_img li:last').prependTo('.slide_img');
 
-                $('.slide_img').css('margin-left', -1903);
+                $('.slide_img').css('margin-left', -w);
 
                 $('.slide_img').stop().animate({ marginLeft: 0 }, 800)
             });
 
             $('#next_dot').click(function(){
-                $('.slide_img').stop().animate({ marginLeft: -1903}, 800, function () {
+                $('.slide_img').stop().animate({ marginLeft: -w}, 800, function () {
 
                     $('.slide_img li:first').appendTo('.slide_img');
 
@@ -50,17 +50,17 @@
 
                 $('#slide .item_flex:last').prependTo('#slide');
 
-                $('#slide').css('margin-left', -367);
+                $('#slide').css('margin-left', -355);
 
-                $('#slide').stop().animate({ marginLeft: 0 }, 800)
+                $('#slide').stop().animate({ marginLeft: 0 }, 1000)
 
             });
 
-
+ 
 
             $('.next').click(function () {
 
-                $('#slide').stop().animate({ marginLeft: -367}, 800, function () {
+                $('#slide').stop().animate({ marginLeft: -355}, 1000, function () {
 
                     $('#slide .item_flex:first').appendTo('#slide');
 
@@ -195,17 +195,13 @@
                 </ul>
                 <div id="search">
                     <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
-                    <button class="s_btn">도서검색</button>
+                    <i class="fas fa-search"></i>
                 </div>
             </div>
         </div>
         <div id="underheader">
             <div id="small">
                 <img src="img/i.png" id="menu">
-                <div id="search">
-                    <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
-                    <button class="s_btn">도서검색</button>
-                </div>
                 <div id="navb">
                     <ul>
                         <li><a href="#">자료검색</a></li>
@@ -214,11 +210,13 @@
                         <li><a href="#">찾아가는 도서관</a></li>
                         <li><a href="#">온라인 서비스</a></li>
                         <li><a href="#">안산의 책</a></li>
-
                     </ul>
 
                 </div>
-
+                <div id="search">
+                    <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
+                    <i class="fas fa-search"></i>
+                </div>
             </div>
 
         </div>
@@ -229,7 +227,9 @@
                 <li>
                     <img src="img/libary_slide.jpg">     
                 </li>
-                <li><img src="img/libary_slide2.jpg"></li>
+                <li>
+                    <img src="img/libary_slide2.jpg">
+                </li>
             </ul>
             <div id="slide_dot">
             <button id="perv_dot"></button>
