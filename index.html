@@ -25,6 +25,8 @@
         });
 
         $(function (){
+            var w=window.innerWidth;             
+
             $('#perv_dot').click(function(){
                 $('.slide_img li:last').prependTo('.slide_img');
 
@@ -45,32 +47,58 @@
     });
 
         $(function () {
+            var w=window.innerWidth; 
+                if (window.matchMedia("(max-width:768px)").matches) {
+                    $('.prev').click(function () {
 
-            $('.prev').click(function () {
+                        $('#slide .item_flex:last').prependTo('#slide');
 
-                $('#slide .item_flex:last').prependTo('#slide');
+                        $('#slide').css('margin-left', -w);
 
-                $('#slide').css('margin-left', -355);
+                        $('#slide').stop().animate({ marginLeft: 0 }, 1000)
 
-                $('#slide').stop().animate({ marginLeft: 0 }, 1000)
+                    });
 
+
+
+                    $('.next').click(function () {
+
+                        $('#slide').stop().animate({ marginLeft: -w }, 1000, function () {
+
+                            $('#slide .item_flex:first').appendTo('#slide');
+
+                            $('#slide').css({ marginLeft: 0 });
+
+                        });
+
+                    });
+             
+                } else {
+                    $('.prev').click(function () {
+
+                        $('#slide .item_flex:last').prependTo('#slide');
+
+                        $('#slide').css('margin-left', -w);
+
+                        $('#slide').stop().animate({ marginLeft: 0 }, 1000)
+
+                    });
+
+
+
+                    $('.next').click(function () {
+
+                        $('#slide').stop().animate({ marginLeft: -w }, 1000, function () {
+
+                            $('#slide .item_flex:first').appendTo('#slide');
+
+                            $('#slide').css({ marginLeft: 0 });
+
+                        });
+
+                    });
+                };
             });
-
- 
-
-            $('.next').click(function () {
-
-                $('#slide').stop().animate({ marginLeft: -355}, 1000, function () {
-
-                    $('#slide .item_flex:first').appendTo('#slide');
-
-                    $('#slide').css({ marginLeft: 0 });
-
-                });
-
-            });
-
-        });
 
         $(function () {
                 $(window).scroll(function () {
@@ -198,6 +226,8 @@
                     <i class="fas fa-search"></i>
                 </div>
             </div>
+         
+        </div>
         </div>
         <div id="underheader">
             <div id="small">
@@ -211,12 +241,12 @@
                         <li><a href="#">온라인 서비스</a></li>
                         <li><a href="#">안산의 책</a></li>
                     </ul>
-
+                    <div id="search">
+                        <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
+                        <i class="fas fa-search"></i>
+                    </div>
                 </div>
-                <div id="search">
-                    <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
-                    <i class="fas fa-search"></i>
-                </div>
+                
             </div>
 
         </div>
@@ -378,7 +408,11 @@
             <div class="img_content">
                 <div class="img_title_flex">
                     <div class="img_title">
-                        <h2 class="title">감골도서관이 준비한 이벤트</h2>
+                        <h2 class="title">감골도서관이 준비한 이벤트</h2><br>
+                        <div class="evnet_text">
+                            <h3>감골 도서관에서의 특별한 경험</h3>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -386,10 +420,6 @@
                 <div class="img_content_flex">
                     <div class="event">
                         <img src="img/book_1.jpg">
-                        <div class="evnet_text">
-                            <h3>감골도서관 이벤트</h3>
-                            <span>감골도서관 이벤트</span>
-                        </div>
                     </div>
                     <div class="event">
                         <img src="img/book_2.jpg">
