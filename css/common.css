@@ -148,10 +148,8 @@
         margin: 0 auto;
     }
 
-    #under img {
-        width: 150px;
-        height: 50px;
-        float: left;
+    .under_text {
+        padding: 30px 30px 30px 30px;
     }
 }
 
@@ -299,10 +297,8 @@
         padding: 10px 10px 10px 10px;
     }
 
-    #under img {
-        width: 150px;
-        height: 50px;
-        float: left;
+    .under_text {
+        padding: 30px 30px 30px 30px;
     }
 }
 
@@ -427,7 +423,7 @@
     }
 
     #under {
-        width: 1140px;
+        width: 100%;
         height: 100px;
         color: white;
         text-align: center;
@@ -435,9 +431,8 @@
         padding: 10px 10px 10px 10px;
     }
 
-    #under img {
-        width: 150px;
-        height: 50px;
-        float: left;
+    .under_text {
+        padding: 30px 30px 30px 30px;
     }
+
 }
