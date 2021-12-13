@@ -95,6 +95,10 @@
         align-items: center;
     }
 
+    .s_box {
+        margin-right: 10px;
+    }
+
     #small {
         z-index: 5;
         display: flex;
@@ -244,6 +248,10 @@
         height: 30px;
         display: flex;
         align-items: center;
+    }
+
+    .s_box {
+        margin-right: 10px;
     }
 
     #small {
