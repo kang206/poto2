@@ -72,48 +72,52 @@
         background-color: white;
         color: #333;
     }
+    
+    #topheader {
+        display: none;
+    }
 
     #underheader {
         width: 100%;
-        height: auto;
+        height: 200px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        /* align-items: center;
         justify-content: space-between;
-        margin: 0 auto;
+        margin: 0 auto; */
         background-color: lightgray;
     }
 
     #search {
-        width: 400px;
+        width: 200px;
         height: 30px;
-        float: right;
+        display: flex;
+        align-items: center;
     }
 
     #small {
         z-index: 5;
-        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     #navb {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         z-index: 10;
-    }
-
-    #navb ul {
         background-color: lightgray;
     }
+
 
     #navb a {
         padding: 15px;
         text-decoration: none;
         display: block;
+        
     }
 
     #navb a:hover {
-        background-color: gray;
+        background-color: #eee;
         color: #666;
         text-decoration: none;
         display: block;
@@ -167,6 +171,7 @@
         margin: 0 auto;
     }
 
+
     #logo {
         width: 100%;
         height: 200px;
@@ -219,40 +224,41 @@
         padding-bottom: 126px;
     }
 
-
+    #topheader {
+        display: none;
+    }
 
     #underheader {
         width: 100%;
         height: auto;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        /* align-items: center;
         justify-content: space-between;
-        margin: 0 auto;
+        margin: 0 auto; */
         background-color: lightgray;
     }
 
     #search {
-        width: 400px;
+        width: 200px;
         height: 30px;
-        
+        display: flex;
+        align-items: center;
     }
 
     #small {
         z-index: 5;
         display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     #navb {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         z-index: 10;
-    }
-
-    #navb ul {
         background-color: lightgray;
     }
+
 
     #navb a {
         padding: 15px;

@@ -47,8 +47,8 @@
     });
 
         $(function () {
-            var w=window.innerWidth; 
-                if (window.matchMedia("(max-width:768px)").matches) {
+            var w=window.innerWidth - 40; 
+                if (window.matchMedia("(max-width:1200px)").matches) {
                     $('.prev').click(function () {
 
                         $('#slide .item_flex:last').prependTo('#slide');
@@ -73,32 +73,31 @@
 
                     });
              
-                } else {
-                    $('.prev').click(function () {
 
-                        $('#slide .item_flex:last').prependTo('#slide');
+            } else {
+                $('.prev').click(function () {
 
-                        $('#slide').css('margin-left', -w);
+                    $('#slide .item_flex:last').prependTo('#slide');
 
-                        $('#slide').stop().animate({ marginLeft: 0 }, 1000)
+                    $('#slide').css('margin-left', -361);
 
-                    });
+                    $('#slide').stop().animate({ marginLeft: 0 }, 1000)
 
+                });
 
+                $('.next').click(function () {
 
-                    $('.next').click(function () {
+                    $('#slide').stop().animate({ marginLeft: -361 }, 1000, function () {
 
-                        $('#slide').stop().animate({ marginLeft: -w }, 1000, function () {
+                        $('#slide .item_flex:first').appendTo('#slide');
 
-                            $('#slide .item_flex:first').appendTo('#slide');
-
-                            $('#slide').css({ marginLeft: 0 });
-
-                        });
+                        $('#slide').css({ marginLeft: 0 });
 
                     });
-                };
-            });
+
+                });
+            };
+        });
 
         $(function () {
                 $(window).scroll(function () {
@@ -221,38 +220,33 @@
                     <li><a href="#">온라인 서비스</a></li>
                     <li><a href="#">안산의 책</a></li>
                 </ul>
-                <div id="search">
-                    <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
-                    <i class="fas fa-search"></i>
-                </div>
             </div>
-         
+            <div id="search">
+                <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
         </div>
         <div id="underheader">
             <div id="small">
                 <img src="img/i.png" id="menu">
+                
                 <div id="search">
                     <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
                     <i class="fas fa-search"></i>
                 </div>
-                <div id="navb">
-                    <ul>
-                        <li><a href="#">자료검색</a></li>
-                        <li><a href="#">문화행사</a></li>
-                        <li><a href="#">열린공간</a></li>
-                        <li><a href="#">찾아가는 도서관</a></li>
-                        <li><a href="#">온라인 서비스</a></li>
-                        <li><a href="#">안산의 책</a></li>
-                    </ul>
-                    <div id="search">
-                        <input class="s_box" type="text" name="search" maxlength="255" value="" autocomplete="off">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-                
             </div>
 
+            <div id="navb">                    
+                <ul> 
+                    <li><a href="#">자료검색</a></li>
+                    <li><a href="#">문화행사</a></li>
+                    <li><a href="#">열린공간</a></li>
+                    <li><a href="#">찾아가는 도서관</a></li>
+                    <li><a href="#">온라인 서비스</a></li>
+                    <li><a href="#">안산의 책</a></li>
+                </ul> 
+            </div>
         </div>
     </header>
     <section id="swich_body">
