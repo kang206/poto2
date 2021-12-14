@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-* {
-    margin: 0;
-    padding: 0;
-    font-style: none;
-    list-style: none;
-    font-family: 'Noto Sans';
-}
 
 @media only screen and (max-width: 768px) {
     /* 768px 이하일 때 css 코드 작성: 모바일용 */
@@ -26,13 +19,13 @@
 
     #toplogo {
         width: 100%;
-        height: 200px;
+        height: 182px;
         margin: 0 auto;
     }
 
     #logo {
         width: 100%;
-        height: 200px;
+        height: 182px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,6 +88,11 @@
         align-items: center;
     }
 
+    #ser {
+        color: #eee;
+        font-size: 15pt;
+    }
+
     .s_box {
         margin-right: 10px;
     }
@@ -103,13 +101,16 @@
         z-index: 5;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
+        height: 50px;
+        background-color: #333;
     }
 
     #navb {
         width: 100%;
         z-index: 10;
-        background-color: lightgray;
+        background-color: #333;
     }
 
 
@@ -117,12 +118,13 @@
         padding: 15px;
         text-decoration: none;
         display: block;
+        color: #eee;
         
     }
 
     #navb a:hover {
         background-color: #eee;
-        color: #666;
+        color: black;
         text-decoration: none;
         display: block;
     }
@@ -171,14 +173,14 @@
 
     #toplogo {
         width: 100%;
-        height: 200px;
+        height: 182px;
         margin: 0 auto;
     }
 
 
     #logo {
         width: 100%;
-        height: 200px;
+        height: 182px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -250,6 +252,11 @@
         align-items: center;
     }
 
+    #ser {
+        color: #eee;
+        font-size: 15pt;
+    }
+
     .s_box {
         margin-right: 10px;
     }
@@ -258,13 +265,16 @@
         z-index: 5;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
+        height: 50px;
+        background-color: #333;
     }
 
     #navb {
         width: 100%;
         z-index: 10;
-        background-color: lightgray;
+        background-color: #333;
     }
 
 
@@ -272,12 +282,13 @@
         padding: 15px;
         text-decoration: none;
         display: block;
+        color: #eee;
         
     }
 
     #navb a:hover {
         background-color: #eee;
-        color: #666;
+        color: black;
         text-decoration: none;
         display: block;
     }
@@ -381,9 +392,13 @@
     #topheader {
         width: 100%;
         height: 50px;
-        background-color: black;
+        background-color: #333;
         position: relative;
         margin: 0 auto;
+    }
+
+    #underheader {
+        display: none;
     }
 
     #nava {
@@ -422,6 +437,11 @@
         left: 1250px;
         position: absolute;
         color: white;
+    }
+
+    #ser {
+        color: #eee;
+        font-size: 15pt;
     }
 
     #small {

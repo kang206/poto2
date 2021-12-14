@@ -1,7 +1,6 @@
     @charset "UTF-8";
 
-    * {margin: 0; padding: 0;
-        font-family: 'Noto Sans';}
+
 
 
         @media only screen and (max-width: 768px) {
@@ -496,7 +495,7 @@
                 transition: all 0.25s ease 0s;
                 width: 100%;
                 transform: translate3d(0px, 0px, 0px);
-                height: 300px;
+                height: 250px;
                 overflow: hidden;
                 float: left;
             }
@@ -528,7 +527,6 @@
                 align-content: center;
                 align-items: center;
                 float: left;
-                margin-right: 20px;
                 margin-left: 20px;
             }
             
@@ -651,7 +649,7 @@
             
             #main_info {
                 width: 100%;
-                height: 1200px;
+                height: 800px;
                 padding: 7em 0;
                 position: relative;
             }
@@ -673,7 +671,7 @@
                 width: 60%;
                 height: 700px;
                 position: relative;
-                margin-right: 50px;
+                margin-right: 10px;
                 
             }
             
@@ -698,13 +696,13 @@
             }
             
             .side_6 {
-                max-width: 100%;
+                max-width: 45%;
                 flex: 0 0 50%;
             }
             
             .service {
                 display: block;
-                width: 250px;
+                width: 70%;
                 height: 200px;
                 position: relative;
                 background: lightgreen;
@@ -718,7 +716,7 @@
             }
             
             .service h1 {
-                font-size: 18pt;
+                font-size: 15pt;
                 font-family: "맑은 고딕";
                 margin-top: 10px;
             }
@@ -833,7 +831,7 @@
             
             #best_info {
                 width: 100%;
-                height: 1300px;
+                height: 800px;
                 padding: 7em 0;
                 position: relative;
             }
@@ -948,12 +946,16 @@
             
             .best_btn {
                 background-color: lightgreen;
-                width: 100px;
-                height: 25px;
+                width: 150px;
+                height: 40px;
                 border: 1px solid lightgreen;
                 border-radius: 10px 10px 10px 10px;
-                margin: 0 auto;
                 color: gray;
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: nowrap;
             }
             
             .best_btn a {
@@ -1070,7 +1072,7 @@
                 transition: all 0.25s ease 0s;
                 width: 1100px;
                 transform: translate3d(0px, 0px, 0px);
-                height: 300px;
+                height: 200px;
                 overflow: hidden;
             
             }
@@ -1171,20 +1173,20 @@
 
         @media only screen and (min-width: 1200px) {
             #slider {
-                width: 1903px;
+                width: 100vw;
                 height: 450px;
                 position: relative;
                 overflow: hidden;
             }
             
             .slide_img {
-                width: 3806px;
+                width: 200vw;
                 height: 450px;
                 position: relative;
             }
             
             .slide_img li {
-                width: 1903px;
+                width: 100vw;
                 height: 450px;
                 float: left;
                 
@@ -1516,12 +1518,16 @@
             
             .best_btn {
                 background-color: lightgreen;
-                width: 100px;
-                height: 25px;
+                width: 150px;
+                height: 40px;
                 border: 1px solid lightgreen;
                 border-radius: 10px 10px 10px 10px;
-                margin: 0 auto;
                 color: gray;
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: nowrap;
             }
             
             .best_btn a {
@@ -1640,7 +1646,7 @@
                 transition: all 0.25s ease 0s;
                 width: 1100px;
                 transform: translate3d(0px, 0px, 0px);
-                height: 300px;
+                height: 270px;
                 overflow: hidden;
             }
             
