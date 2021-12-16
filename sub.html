@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/sub.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     <header>
@@ -61,16 +64,69 @@
     </header>
     <section id="swich_body">
     <section id="info_banner">
-        <div id="info_title">
-
+        <div id="container">
+            <div class="banner">
+            <h1 class="banner_title">고객센터</h1>
+            <p class="banner_plan">감골도서관의 여러가지 문제점 및 필요한것을 문의해주세요 더욱 발전해나가겠습니다.</p>
+        </div>
         </div>
     </section>
     <section id="find_info">
+        <div id="container">
         <div id="info_detail">
-            
+            <div class="row">
+                <div class="col">
+                    <span class="material-icons" id="info_icon">
+                        location_on
+                        </span>
+                        <h3>위치</h3>
+                    <p>경기도 안산시 상록구 감골공원안길 16-1</p>
+                </div>
+                <div class="col">
+                    <span class="material-icons" id="info_icon">
+                        call
+                        </span>
+                        <h3>전화번호</h3>
+                        <p>031-481-2665</p>
+                </div>
+                <div class="col">
+                    <span class="material-icons" id="info_icon">
+                        fax
+                        </span>
+                        <h3>FAX</h3>
+                        <p>031-481-3632</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="text_info">감골도서관에게 말해주세요<br>
+                        감골도서관은 언제나 여러분과 함께합니다.</h2>
+
+                    <form class="info_form">
+                        <div class="form_grope">
+                            <input type="text" class="form_control" placeholder="이름">
+                        </div>
+                        <div class="form_grope">
+                            <input type="text" class="form_control" placeholder="이메일">
+                        </div>
+                        <div class="form_grope">
+                            <input type="text" class="form_control" placeholder="제목">
+                        </div>
+                        <div class="form_grope">
+                            <textarea name id cols="30" rows="7" class="form_textarea" placeholder="내용" ></textarea>
+                        </div>
+                        <div class="form_grope">
+                            <input type="submit" class="form_btn" placeholder="" value="보내기" >
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
     </section>
-    <section id="map_info"></section>
+    <section id="map_info">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.103924414723!2d126.85254289236399!3d37.29267071819705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6ec4329a6c53%3A0x271f40ae3bf27272!2z6rCQ6rOo64-E7ISc6rSA!5e0!3m2!1sko!2skr!4v1639643236548!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" id="map"></iframe>
+    </section>
 
 
     <footer>
