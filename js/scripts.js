@@ -1,4 +1,4 @@
-<script Lang>
+<script>
 
 function () {
     $("#menu").click(function () {
