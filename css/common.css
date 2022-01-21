@@ -88,6 +88,20 @@
 
     }
 
+
+    #search1 {
+        width: 200px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    #ser1 {
+        color: #eee;
+        font-size: 15pt;
+    }
+
     #ser {
         color: #eee;
         font-size: 15pt;

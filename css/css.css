@@ -715,7 +715,7 @@
                 justify-content: center;
             }
             
-            .service h1 {
+            .service h2 {
                 font-size: 15pt;
                 font-family: "맑은 고딕";
                 margin-top: 10px;
@@ -825,7 +825,7 @@
                 flex-direction: column;
             }
             
-            .counter h1 {
+            .counter h2 {
                 font-size: 24pt;
             }
             
